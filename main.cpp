@@ -10,15 +10,12 @@
 using GridImpl = Grid<10, 10>;
 
 int main() {
-	auto grid = GridImpl::make(
-			Coordinate<0, 0>(),
-			Coordinate<1, 1>()
-			);
+  auto grid = GridImpl::make(Coordinate<0, 0>(), Coordinate<1, 1>());
 
-	for (const auto& row : grid.grid) {
-		for (const auto& cell : row) {
-			std::cout << (cell ? "o" : "x");
-		}
-		std::cout << std::endl;
-	}
+  for (const auto &row : grid.grid) {
+    for (const auto &cell : row) {
+      std::cout << (cell ? "o" : "x");
+    }
+    std::cout << std::endl;
+  }
 }
